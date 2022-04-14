@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>カレンダー</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- xxxx年xx月を表示 -->
+    <h1 id="header"></h1>
+
+    <!-- ボタンクリックで月移動 -->
+    <div id="next-prev-button" >
+        <button id="prev" onclick="prev()"><</button>
+        <button id="next" onclick="next()">></button>
+    </div>
+
+    <!-- カレンダー -->
+    <div id="calendar"></div>
+
+    <!-- 入力フォーム -->
+    <div id="inputForm">
+        <form action="" post="">
+            <div class="form-group">
+                <input type="date" name="date" class="form-control" id="date">                          </div>
+                <input type="file" name="file"  class="form-control-file" id="">
+                <textarea name="content" id="" class="form-control" cols="50" rows="5"></textarea>
+                <input type="submit" class="btn btn-primary" value="登録">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/calendar.js"></script>
+<script>
+    $(document).ready(function(){
+        $("td").click(function(){
+            alert(showDate);
+            var year = showDate.getFullYear();
+            var mm = ("0"+(showDate.getMonth()+1)).slice(-2);
+            var dd = ("0"+$(this).text()).slice(-2);
+
+            var selectedDate = year + "-" + mm + "-" + dd; 
+            $("#inputForm").css("visibility", "visible");
+            $("#date").attr("value", selectedDate);
+        });
+
+        $("submit").click(function() {
+            $("#inputForm").css("visibility", "hidden");
+            return;
+        });
+    });
+</script>
+</body>
+</html>

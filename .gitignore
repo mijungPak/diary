@@ -1,0 +1,8 @@
+#画像データはgitで管理しない
+/images/
+/prac_images/
+
+#画像は対象外だけど、
+#ロゴは管理したい
+
+#!/images/logo.png

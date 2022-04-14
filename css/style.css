@@ -1,0 +1,250 @@
+@charset 'UTF-8';
+/* 初期化 */
+body {
+    font-family: 'メイリオ', sans-serif;
+}
+
+a {
+    color: #000;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/******************************************************
+body {
+    background: url("../images/blue.jpg");
+}
+*******************************************************/
+#title {
+    background: url("../images/blue.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table {
+    width: 100%;
+}
+
+.notBlank {
+    border-color: red;
+}
+
+/*******************************************************/
+/*           メニュー                                  */
+/*******************************************************/
+.menu a:hover {
+    color: #fff;
+}
+
+.selected {
+    font-weight: bold;
+}
+
+.menu > div {
+    width: 150px;
+    line-height: 2;
+/*    border: 1px solid #888; */
+    padding: 5px;
+    margin-bottom: 10px;
+    border-left: 10px solid;
+}
+
+/*******************************************************/
+/*           HOME                                      */
+/*******************************************************/
+.menu .home {
+    border-color: rgb(238, 88, 88);
+}
+.menu .home:hover {
+    font-weight: bold;
+    background-color: rgb(238, 88, 88);
+}
+
+/*******************************************************/
+/*           スケジュール管理関連                       */
+/*******************************************************/
+.schedule {
+    color: rgb(200, 49, 200);
+}
+.menu .schedule {
+    border-color: rgb(200, 49, 200);
+}
+.menu .schedule:hover {
+    font-weight: bold;
+    background-color: rgb(200, 49, 200);
+}
+.home-schedule .sub-title {
+    border-color: rgb(200, 49, 200);
+}
+
+/*******************************************************/
+/*           メモ管理関連                             */
+/*******************************************************/
+.board {
+    color: rgb(172, 217, 66);
+}
+.menu .board {
+    border-color: rgb(172, 217, 66);
+}
+.menu .board:hover {
+    font-weight: bold;
+    background-color: rgb(172, 217, 66);
+}
+.home-board .sub-title {
+    border-color: rgb(172, 217, 66);
+}
+
+#board-list .card {
+    border-color: rgb(172, 217, 66);
+}
+
+#board-list .card:hover {
+    background-color: rgb(231, 255, 231);
+
+}
+
+/*******************************************************/
+/*           アルバム管理関連                           */
+/*******************************************************/
+.album {
+    color: rgb(50, 50, 220);
+}
+.menu .album {
+    border-color: rgb(50, 50, 220);
+}
+.menu .album:hover {
+    font-weight: bold;
+    background-color: rgb(50, 50, 220);
+}
+.home-album .sub-title {
+    border-color: rgb(50, 50, 220);
+}
+
+#photo-list .card-header {
+    border-color: rgb(50, 50, 220);
+}
+#photo-list .card {
+    border-color: rgb(50, 50, 220);
+    margin: 1px;
+}
+
+/*******************************************************/
+/*           プリント管理関連                           */
+/*******************************************************/
+.print {
+    color: rgb(238, 189, 56);
+}
+.menu .print {
+    border-color: rgb(238, 189, 56);
+}
+.menu .print:hover {
+    font-weight: bold;
+    background-color: rgb(238, 189, 56);
+}
+.home-print .sub-title {
+    border-color: rgb(238, 189, 56);
+}
+
+#print-list .card {
+    border-color: rgb(238, 189, 56);
+}
+
+#print-list .card:hover {
+    background-color: rgb(255, 239, 196);
+}
+
+#print-list .card-img-top{
+    width: 100%;
+    height: 250px;
+}
+
+/*******************************************************/
+/*           index(右)                                 */
+/*******************************************************/
+.sub-title {
+    width: 100%;
+    padding: 2px;
+    border-bottom: 2px solid;
+}
+
+.home-img {
+    width: 200px;
+    height: 200px;
+}
+
+/*******************************************************/
+/*           スケジュールのカレンダーテーブル            */
+/*******************************************************/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+
+table {
+   width: 100%;
+}
+
+#cal-main td:hover {
+    background-color: rgb(247, 245, 245);
+}
+
+
+/* 本日 */
+.today {
+    background-color: #ffd1d1;
+}
+
+/* 日曜日 */
+.sunday {
+    color: red;
+}
+
+/* 土曜日 */
+.saterday {
+    color: blue;
+}
+
+/* 前後月の日付 */
+td.disabled {
+    color: #ccc;
+}
+
+/*予定表示*/
+.memo {
+    width: 60%;
+}
+
+/*******************************************************/
+/*           アイコンの色                           */
+/*******************************************************/
+
+.purple {
+    color: purple;
+}
+.blue {
+    color: blue;
+}
+.pink {
+    color: rgb(206, 65, 89);
+}
+.green {
+    color: green;
+}
+/*******************************************************/
+
+/* 全体 */
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+}
+
+footer {
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    padding: 15px 0;
+}
+

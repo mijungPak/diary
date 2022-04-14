@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <div id="header"></div>
+</header>
+
+<div class="container-lg">
+
+    <div class="row">
+        <!-- (左)メニュー -->
+        <div class="col-2">
+            <div class="menu">
+                <div class="home"><a href="../index.html">HOME</a></div>
+            </div>
+            <div class="menu">
+                <div class="schedule"><a href="../schedule/calender.html">スケジュール</a></div>
+            </div>
+            <div class="menu">
+                <div class="board"></i><a href="../board/board.html"></i>メモ帳</a></div>
+            </div>
+            <div class="menu">
+                <div class="album"><a href="../album/album.html">アルバム</a></div>
+            </div>
+            <div class="menu">
+                <div class="print"><a href="../prints/print.html">プリント</a></div>
+            </div>
+        </div>
+
+        <!-- (右)本文 -->
+        <div class="col">
+
+            <div class="container" id="calendar">
+
+                <div id="cal-header">
+                    <h3 class="text-center">
+                        <a href="../schedule/calender.html?date=2022/03" title="2022/03"><i class="bi bi-caret-left-fill"></i></a>
+                        2022年4月
+                        <a href="../schedule/calender.html?date=2022/05" title="2022/05"><i class="bi bi-caret-right-fill"></i></a>
+                    </h3>
+                </div>
+
+                <div id="cal-menu">
+                    <span class="float-left"><a href="../schedule/scheduleList.html"><i class="bi bi-card-list mr-1"></i>リスト</a></span>
+                    <span class="dropdown float-right">
+                        <!-- サブメニュー -->
+                        <span class="viewForm pointer mr-3" data-category="予定追加" data-toggle="modal" data-target="#saveFormModal">
+                            <i class="bi bi-calendar-plus mr-1"></i>予定追加</span>
+
+                        <a class="btn btn-outline-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            さくらの予定    
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a href="../schedule/calender.html?id=0&date=2022/04" class="dropdown-item">全員</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../schedule/calender.html?id=1&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle blue">太郎</i></a>
+                            <a href="../schedule/calender.html?id=2&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle purple">ひろこ</i></a>
+                            <a href="../schedule/calender.html?id=3&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle green">こうた</i></a>
+                            <a href="../schedule/calender.html?id=4&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle pink">さくら</i></a>
+                        </div>
+
+                    </div><!--/.dropdown-->
+                </div>
+
+                <div id="cal-main">
+                    <table class="table" id="calTable">
+                        <tr>
+                            <th>日</th>
+                            <th>月</th>
+                            <th>火</th>
+                            <th>水</th>
+                            <th>木</th>
+                            <th>金</th>
+                            <th>土</th>
+                        </tr>
+                        <tr>
+                            <td class="disabled">27</td>
+                            <td class="disabled">28</td>
+                            <td class="disabled">29</td>
+                            <td class="disabled">30</td>
+                            <td class="disabled">31</td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-01">1</div>
+                            </td>
+                            <td class=" saterday">
+                                <div class="cal-date pointer" data-date="2022-04-02">2</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div class="cal-date pointer"  data-date="2022-04-03">3</div>
+                                <div>
+                                    <i class="bi bi-person-circle blue" title="会社飲み会"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-04">4</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-05">5</div>
+                                <div>
+                                    <i class="bi bi-person-circle blue" title="友達と一緒にゴルフ"></i>
+                                    <i class="bi bi-person-circle green" title="テニス"></i>
+                                    <br>
+                                    <i class="bi bi-person-circle purple" title="バドミントン"></i>
+                                    <i class="bi bi-person-circle pink" title="バレーボール"></i>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="cal-date pointer"  data-date="2022-04-06">6</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-07">7</div>
+                                <div>
+                                    <i class="bi bi-person-circle green" title="面接"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-08">8</div>
+                            </td>
+                            <td class="saterday">
+                                <div class="cal-date pointer" data-date="2022-04-09">9</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div class="cal-date pointer" data-date="2022-04-10">10</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-11">11</div>
+                                <div>
+                                    <i class="bi bi-person-circle pink" title="体育館"></i>
+                                    <i class="bi bi-person-circle purple" title="体育館"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-12">12</div>
+                                <div>
+                                    <i class="bi bi-person-circle pink" title="裕子と"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-13">13</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-14">14</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-15">15</div>
+                                <div>
+                                    <i class="bi bi-person-circle pink" title="面接"></i>
+                                </div>
+                            </td>
+                            <td class=" saterday">
+                                <div class="cal-date pointer" data-date="2022-04-16">16</div>
+                                <div>
+                                    <i class="bi bi-person-circle purple" title="水族館"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div class="cal-date pointer" data-date="2022-04-17">17</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-18">18</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-19">19</div>
+                            </td>
+                            <td class="today">
+                                <div class="cal-date pointer" data-date="2022-04-20">20</div>
+                                <div>
+                                    <i class="bi bi-person-circle purple" title="コンペ"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-21">21</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-22">22</div>
+                            </td>
+                            <td class="saterday">
+                                <div class="cal-date pointer" data-date="2022-04-23">23</div>
+                                <div data-date="2022-04-23">
+                                    <i class="bi bi-person-circle blue" title=""></i>
+                                    <i class="bi bi-person-circle green" title=""></i>
+                                    <br>
+                                    <i class="bi bi-person-circle purple" title=""></i>
+                                    <i class="bi bi-person-circle pink" title=""></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">
+                                <div class="cal-date pointer" data-date="2022-04-24">24</div>
+                                <div data-date="2022-04-24">
+                                    <i class="bi bi-person-circle blue" title="会社飲み会"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-25">25</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-26">26</div>
+                                <div data-date="2022-04-26">
+                                    <i class="bi bi-person-circle green" title="デート"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-27">27</div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-28">28</div>
+                                <div>
+                                    <i class="bi bi-person-circle pink" title="銀座で"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cal-date pointer" data-date="2022-04-29">29</div>
+                            </td>
+                            <td class="saterday">
+                                <div class="cal-date pointer" data-date="2022-04-30">30</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!-- /.container-->
+
+        </div>
+    </div>
+</div>
+
+<!-- 追加/変更フォーム -->
+<div class="modal fade" id="saveFormModal" tabindex="-1" role="dialog" aria-labelledby="saveFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">
+                    <i class="bi bi-clipboard-plus"></i><span class="modal-title">予定追加</span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="../schedule/calender.html">
+                <div class="modal-body">
+                    <input type="hidden" name="id">
+                    <div class="form-inline mb-2">
+                        <select class="custom-select-sm mr-2 notBlank">
+                            <option value="1">太郎</option>
+                            <option value="2">ひろこ</option>
+                            <option value="3">こうた</option>
+                            <option value="4">さくら</option>
+                        </select>
+                        <div class="form-group mr-2">
+                            <input type="date" name="date" value="2022-04-05" class="form-control-sm notBlank">
+                        </div>
+                        <div class="form-group mr-2">
+                            <input type="time" name="time" class="form-control-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="memo" placeholder="カレンダーでマウスを重ねた時に表示されます。" class="form-control notBlank">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">登録</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    IncludeHTML("div#header","../common/header.html");
+
+    //選択するメニュー
+    chooseNav('.schedule');
+
+    //追加、変更画面表示
+    modalControl('viewForm', '#saveFormModal');
+
+    //日付にエベント登録
+$('.cal-date').click(function(event) {
+    var date = event.target.dataset.date;
+ //   alert(event.target.dataset.date);
+    var dest = "../schedule/scheduleDayList.html?date=" + date;
+    location.href = dest;
+});
+
+</script>
+</body>
+</html>

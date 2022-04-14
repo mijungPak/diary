@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div id="header"></div>
+</header>
+
+<div class="container-lg">
+
+    <div class="row">
+        <!-- 左(メニュー)-->
+        <div class="col-2">
+            <div class="menu">
+                <div class="home"><a href="../index.html">HOME</a></div>
+            </div>
+            <div class="menu">
+                <div class="schedule"><a href="../schedule/calender.html">スケジュール</a></div>
+            </div>
+            <div class="menu">
+                <div class="board"></i><a href="../board/board.html"></i>メモ帳</a></div>
+            </div>
+            <div class="menu">
+                <div class="album"><a href="../album/album.html">アルバム</a></div>
+            </div>
+            <div class="menu">
+                <div class="print"><a href="prints/print.html">プリント</a></div>
+            </div>
+        </div>
+
+        <!-- 右(本文)-->
+        <div class="col">
+                <div class="home-schedule">
+                    <div class="sub-title font-weight-bold my-3">
+                        <i class="bi bi-calendar3 schedule mr-2"></i>スケジュール
+                        <span class="float-right">
+                            <a href="../schedule/calender.html"><i class="bi bi-calendar3" title="カレンダー"></i></a>
+                            <a href="../schedule/scheduleList.html"><i class="bi bi-card-list" title="リスト"></i></a>
+                            <a href=""><i class="bi bi-pencil" title="追加"></i></a>
+                        </span>
+                    </div>
+                    <div class="home-schedule-list">
+                        <!--今日から一週間分-->
+                        <h6 class="text-center font-weight-bold">2022年4月20日</h6>
+                        <!-- カレンダー表示 -->
+                        <table class="table">
+                            <tr>
+                                <th>水</th>
+                                <th>木</th>
+                                <th>金</th>
+                                <th class="saterday">土</th>
+                                <th class="sunday">日</th>
+                                <th>月</th>
+                                <th>火</th>
+                            </tr>
+                                <tr>
+                                <td class=" today" data-date="2022-04-20">20
+                                    <div>
+                                        <i class="bi bi-person-circle purple" title="コンペ"></i>
+                                    </div>
+                                </td>
+                                <td data-date="2022-04-21">21</td>
+                                <td data-date="2022-04-22">22</td>
+                                <td class=" saterday" data-date="2022-04-23">23
+                                    <div data-date="2022-04-23">
+                                        <i class="bi bi-person-circle blue" title=""></i>
+                                        <i class="bi bi-person-circle green" title=""></i>
+                                        <br>
+                                        <i class="bi bi-person-circle purple" title=""></i>
+                                        <i class="bi bi-person-circle pink" title=""></i>
+                                    </div>
+                                </td>
+                                <td class="sunday" data-date="2022-04-24">24
+                                    <div data-date="2022-04-24">
+                                        <i class="bi bi-person-circle blue" title="会社飲み会"></i>
+                                    </div>
+                                </td>
+                                <td data-date="2022-04-25">25</td>
+                                <td data-date="2022-04-26">26
+                                    <div data-date="2022-04-26">
+                                        <i class="bi bi-person-circle green" title="デート"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- リスト -->
+                        <table class="table table-hover">
+                            <tr>
+                                <td>2022/04/20</td>
+                                <td>11:00</td>
+                                <td>ひろこ</td>
+                                <td class="memo">コンペ
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2022/04/23</td>
+                                <td>09:00</td>
+                                <td>たろう</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2022/04/23</td>
+                                <td>09:00</td>
+                                <td>こうた</td>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="home-board">
+                    <div class="sub-title font-weight-bold my-3">
+                        <i class="bi bi-pencil-square board mr-2"></i>メモ帳
+                        <span class="float-right">
+                            <a href="../board/board.html"><i class="bi bi-card-list" title="リスト"></i></a>
+                            <a href=""><i class="bi bi-pencil" title="追加"></i></a>
+                        </span>
+                    </div>
+                    <div class="home-board-list">
+                        <div class="row pl-3">
+                            <span class="card memo">
+                                <span class="card-body">
+                                  <h5 class="card-title"></h5>
+                                  <p class="card-text">なす トマト たまご<br>牛乳</p>
+                                </span>
+                            </span>
+    
+                            <span class="card memo">
+                                <span class="card-body">
+                                  <h5 class="card-title">さくら</h5>
+                                  <p class="card-text">23日お弁当不要</p>
+                                </span>
+                            </span>
+
+                            <span class="card memo">
+                                <span class="card-body">
+                                  <h5 class="card-title">家族会議</h5>
+                                  <p class="card-text">30日 19:00~</p>
+                                </span>
+                            </span>
+                        </div><!--/.card-deck-->
+                    </div>
+                </div>
+
+                <div class="home-album">
+                    <div class="sub-title font-weight-bold my-3">
+                        <i class="bi bi-image album mr-2"></i>アルバム
+                        <span class="float-right">
+                            <a href="../album/album.html"><i class="bi bi-card-list" title="リスト"></i></a>
+                            <a href=""><i class="bi bi-pencil" title="追加"></i></a>
+                        </span>
+                    </div>
+                    <div class="home-album-list">
+                        <!-- 写真リスト最新の3県でスライドショー -->
+                        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                    <img src="../images/food/bibimba.png" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="200">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5 class="text-white font-weight-bold">ビビンバ</h5>
+                                    <p class="text-white">2020年4月12日</p>
+                                  </div>
+                                </div>
+                              <div class="carousel-item">
+                                <img src="../images/food/buri.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="200">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5 class="text-white font-weight-bold">ぶり大根</h5>
+                                    <p class="text-white">2020年4月12日</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../images/food/chahan.png" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="200">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5 class="text-white font-weight-bold">チャーハン</h5>
+                                    <p class="text-white">2020年4月12日</p>
+                                  </div>
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="home-print">
+                    <div class="sub-title font-weight-bold my-3">
+                        <i class="bi bi-collection print mr-2"></i>プリント
+                        <span class="float-right">
+                            <a href="../prints/print.html"><i class="bi bi-card-list" title="リスト"></i></a>
+                            <a href=""><i class="bi bi-pencil" title="追加"></i></a>
+                        </span>
+                    </div>
+                    <div class="home-print-list">
+                        <img src="images/printImg/20220405_075247387_iOS.jpg" alt="..." class="img-thumbnail home-img m-1">
+                        <img src="images/printImg/20220405_075307729_iOS.jpg" alt="..." class="img-thumbnail home-img m-1">
+                        <img src="images/printImg/20220405_075333947_iOS.jpg" alt="..." class="img-thumbnail home-img m-1">
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    IncludeHTML("div#header","common/header.html");
+    //Home選択できるように
+    chooseNav('.home');
+</script>
+</body>
+</html>
