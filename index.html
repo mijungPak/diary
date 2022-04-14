@@ -15,7 +15,7 @@
     <div id="header"></div>
 </header>
 
-<div class="container-lg">
+<div class="container-xl">
 
     <div class="row">
         <!-- 左(メニュー)-->
@@ -93,26 +93,15 @@
                             </tr>
                         </table>
                         <!-- リスト -->
+                        <div class="alert alert-info">
+                            今日の予定はありません
+                        </div>
                         <table class="table table-hover">
                             <tr>
                                 <td>2022/04/20</td>
                                 <td>11:00</td>
                                 <td>ひろこ</td>
                                 <td class="memo">コンペ
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2022/04/23</td>
-                                <td>09:00</td>
-                                <td>たろう</td>
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2022/04/23</td>
-                                <td>09:00</td>
-                                <td>こうた</td>
-                                <td>
                                 </td>
                             </tr>
                         </table>
@@ -127,30 +116,41 @@
                             <a href=""><i class="bi bi-pencil" title="追加"></i></a>
                         </span>
                     </div>
-                    <div class="home-board-list">
-                        <div class="row pl-3">
-                            <span class="card memo">
-                                <span class="card-body">
-                                  <h5 class="card-title"></h5>
-                                  <p class="card-text">なす トマト たまご<br>牛乳</p>
-                                </span>
-                            </span>
-    
-                            <span class="card memo">
-                                <span class="card-body">
-                                  <h5 class="card-title">さくら</h5>
-                                  <p class="card-text">23日お弁当不要</p>
-                                </span>
-                            </span>
 
-                            <span class="card memo">
-                                <span class="card-body">
-                                  <h5 class="card-title">家族会議</h5>
-                                  <p class="card-text">30日 19:00~</p>
-                                </span>
-                            </span>
-                        </div><!--/.card-deck-->
-                    </div>
+                    <div id="board-list">
+                        <div class="alert alert-info">
+                            今日のメモはありません
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 mb-2">
+                                <div class="card">
+                                    <div class="card-body bg-transparent">
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">なす トマト たまご<br>牛乳</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-md-3 col-sm-4 mb-2">
+                                <div class="card">
+                                    <div class="card-body bg-transparent">
+                                    <h5 class="card-title">さくら</h5>
+                                    <p class="card-text">23日お弁当不要</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 mb-2">
+                                <div class="card">
+                                    <div class="card-body bg-transparent">
+                                    <h5 class="card-title">家族会議</h5>
+                                    <p class="card-text">30日 19:00~</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.board-list -->
                 </div>
 
                 <div class="home-album">
@@ -213,7 +213,7 @@
                             <a href=""><i class="bi bi-pencil" title="追加"></i></a>
                         </span>
                     </div>
-                    <div class="home-print-list">
+                    <div class="print-list">
                         <img src="images/printImg/20220405_075247387_iOS.jpg" alt="..." class="img-thumbnail home-img m-1">
                         <img src="images/printImg/20220405_075307729_iOS.jpg" alt="..." class="img-thumbnail home-img m-1">
                         <img src="images/printImg/20220405_075333947_iOS.jpg" alt="..." class="img-thumbnail home-img m-1">
