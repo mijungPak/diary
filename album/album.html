@@ -49,8 +49,7 @@
                 </div>
 
                 <!-- 追加、検索 -->
-                <span class="container text-right">
-                    <div>
+                <div class="container text-right">
                     <form action="../album/album.html">
                         <span class="addForm pointer mr-3" data-category="写真追加" data-toggle="modal" data-target="#addFormModal">
                         <i class="bi bi-image mr-1"></i>追加</span>
@@ -63,40 +62,70 @@
                         <input type="text" name="tags" size="10" placeholder="タグ"> 
                         <button class="btn-outline btn"><i class="bi bi-search"></i>検索</button>
                     </form>
-                    </div>
-                </span>
+                </div>
 
-                <!-- 写真リスト -->
+                <!-- アルバムリスト -->
                 <div id="photo-list">
 
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title align-middle">運動会</h5>
-                        </div>
-                        <div class="card-body bg-transparent">
-                            <img src="../prac_images/flower1.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower3.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower5.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower1.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower3.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower5.jpg" alt="..." class="img-thumbnail home-img m-1">
-                        </div>
-                    </div>
+                    <div id="photo-list" class="row">
 
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title align-middle">運動会</h5>
+                        <div class="col-md-4 col-sm-6 mb-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title align-middle">運動会</h5>
+                                </div>
+                                <a href="../album/albumList.html?albumId=1">
+                                    <img class="card-img-top" src="../prac_images/flower1.jpg">
+                                </a>
+                                <div class="card-footer text-right">
+                                    <small class="text-muted">12枚</small>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body bg-transparent">
-                            <img src="../prac_images/flower1.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower3.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower5.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower1.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower3.jpg" alt="..." class="img-thumbnail home-img m-1">
-                            <img src="../prac_images/flower5.jpg" alt="..." class="img-thumbnail home-img m-1">
-                        </div>
-                    </div>
 
+                        <div class="col-md-4 col-sm-6 mb-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title align-middle">運動会</h5>
+                                </div>
+                                <a href="../album/albumList.html?albumId=1">
+                                    <img class="card-img-top" src="../prac_images/flower3.jpg">
+                                </a>
+                                <div class="card-footer text-right">
+                                    <small class="text-muted">12枚</small>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 col-sm-6 mb-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title align-middle">卒園式</h5>
+                                </div>
+                                <a href="../album/albumList.html?albumId=1">
+                                    <img class="card-img-top" src="../prac_images/flower5.jpg">
+                                </a>
+                                <div class="card-footer text-right">
+                                    <small class="text-muted">12枚</small>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 col-sm-6 mb-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title align-middle">運動会</h5>
+                                </div>
+                                <a href="../album/albumList.html?albumId=1">
+                                    <img class="card-img-top" src="../prac_images/flower4.jpg">
+                                </a>
+                                <div class="card-footer text-right">
+                                    <small class="text-muted">12枚</small>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
                 </div>
 
             </div>

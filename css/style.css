@@ -126,7 +126,9 @@ table {
 }
 #photo-list .card {
     border-color: rgb(50, 50, 220);
-    margin: 1px;
+}
+#photo-list .card:hover {
+    background-color: rgb(228, 228, 255);
 }
 
 /*******************************************************/
