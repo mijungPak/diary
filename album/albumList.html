@@ -15,7 +15,7 @@
     <div id="header"></div>
 </header>
 
-<div class="container-lg">
+<div class="container-xl">
 
     <div class="row">
         <!-- 左(メニュー) -->
@@ -44,31 +44,33 @@
 
                 <div id="cal-header">
                     <h3 class="text-center">
-                        <i class="bi bi-image album mr-2"></i>アルバム
+                        <i class="bi bi-image album mr-2"></i>アルバム - 運動会
                     </h3>
                 </div>
 
                 <!-- 追加、検索 -->
-                <form action="">
-                    <div id="category" class="container mb-1 text-right">
-                        <span class="addForm pointer mr-3" data-category="写真追加" data-toggle="modal" data-target="#addFormModal">
-                            <i class="bi bi-image mr-1"></i>追加</span>
-                        <span class="pointer">
-                            <select name="kind">
-                                <option value="0">すべて</option>
-                                <option value="1">運動会</option>
-                                <option value="2">入学式</option>
-                                <option value="3">卒園式</option>
-                            </select>
-                            <input type="text" name="tags" size="10" placeholder="タグ"> 
-                            <button class="btn-outline btn"><i class="bi bi-search"></i>検索</button>
+                    <form action="">
+                        <a href="../album/album.html"><i class="bi bi-card-list mr-1"></i>リスト</a>
+                        <span class="float-right mb-1">
+                            <span class="addForm pointer mr-3" data-category="写真追加" data-toggle="modal" data-target="#addFormModal">
+                                <i class="bi bi-image mr-1"></i>追加</span>
+                            <span class="pointer">
+                                <select name="kind">
+                                    <option value="0">すべて</option>
+                                    <option value="1">運動会</option>
+                                    <option value="2">入学式</option>
+                                    <option value="3">卒園式</option>
+                                </select>
+                                <input type="text" name="tags" size="10" placeholder="タグ"> 
+                                <button class="btn-outline btn"><i class="bi bi-search"></i>検索</button>
+                            </span>
                         </span>
-                    </div>
-                </form>
+                    </form>
 
                 
                 <div id="photo-list">
 
+                    <img src="../prac_images/flower1.jpg">
 
                 </div>
 
