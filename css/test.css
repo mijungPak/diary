@@ -7,7 +7,8 @@ body {
 }
 
 .menu {
-    border-left: 10px solid;
+    border: 1px solid darkgrey;
+    border-left: 20px solid;
     height: 30px;
     margin: 0px 0px 2px;
 }
