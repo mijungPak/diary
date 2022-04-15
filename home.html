@@ -4,11 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/test.css">
-</head>
-<body style="height: 100%;">
-    <div class="container-xl">
+    <!--link rel="stylesheet" href="css/test.css"-->
+
+    <style>/*
+        .menu {
+            max-width: 200px;
+        }
+    
+        .menu a {
+            padding: 15px;
+            text-decoration: none;
+            color: #000;
+        }
+    
+        label {
+            margin: 0 0 4px 0;
+            padding: 15px;
+            line-height: 1;
+            color: #fff;
+            background-color: green;
+            cursor: pointer;
+        }
+    
+        input {
+            display: none;
+        }
+    
+        .menu ul {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            list-style: none;
+        }
+    
+        .test_menu li {
+            height: 0;
+            overflow: hidden;
+            -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        }
+
+        #menu_bar01:checked ~ #links01 li {
+            height: 54px;
+            opacity: 1;
+        }
+    */
+
+    /* ボタンにスタイルを適用 */
+/* トグルチェックボックスを隠す */
+#expand-toggle {
+  display: none;
+}
+
+/* 開く要素は既定で隠す */
+.expandable {
+  visibility: collapse;
+  background: #ddd;
+}
+
+/* ボタンにスタイルを適用 */
+#expand-btn {
+  display: inline-block;
+  border: 1px solid;
+  height: 25px;
+  width: 15px;
+  background-color: green;
+}
+
+/* チェックボックスをチェックしたときに隠しコンテンツを表示 */
+#expand-toggle:checked ~ * .expandable {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* チェックボックスがチェックされていたらボタンにスタイルを適用 */
+#expand-toggle:checked ~ #expand-btn {
+  background-color: #ccc;
+}
+
+#home-btn {
+    border: 1px solid;
+  height: 25px;
+  width: 15px;
+  background-color: green;
+
+}
+    </style>
+    </head>
+
+<body>
+
+    <input type="checkbox" id="expand-toggle" />
+    <input type="checkbox" id="home-expand-toggle" />
+<table>
+    <tr>
+        <td class="expandable"><a href="">link01</a></td>
+        <td class="space">
+            <label for="home-expand-toggle" id="home-btn"></label>
+        </td>
+    </tr>
+</table>
+
+
+
+    <table>
+        <tr>
+            <td class="expandable">1</td>
+            <td>1</td>
+            <td class="expandable"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr class="expandable">
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <table>
+      <thead>
+        <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+      </thead>
+      <tbody>
+        <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+        <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+        <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+        <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+        <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+      </tbody>
+    </table>
+    
+
+<div class="container-xl">
         <div class="row">
             <div id="menu">
                 <a href="#" id="home" class="menu home">home</a>
@@ -29,10 +163,26 @@
 left
             </div>
             <div id="right" class="col-6">
-right
+
+
+
+                right
             </div>
         </div>
     </div>
+
+
+    <div class="test_menu">
+        <label for="menu_bar01">ラベル１</label>
+        <input type="checkbox" id="menu_bar01">
+        <ul id="links01">
+            <li><a href="">link01</a></li>
+            <li><a href="">link02</a></li>
+        </ul>
+    </div>
+    
+
+
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -55,7 +205,6 @@ function addMenuControll(smMenu, targetMenu) {
     });
     $(smMenu).mouseout(function() {
         $(targetMenu).css("visibility", "hidden");
-        
     });
 
 }
