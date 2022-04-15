@@ -51,8 +51,7 @@ function viewMenu(menuId) {
 }
 function addMenuControll(smMenu, targetMenu) {
     $(smMenu).mouseover(function() {
-//        $(targetMenu).css("visibility", "visible");
-$(targetMenu).show("slow");
+        $(targetMenu).css("visibility", "visible");
     });
     $(smMenu).mouseout(function() {
         $(targetMenu).css("visibility", "hidden");
