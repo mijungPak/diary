@@ -2,6 +2,7 @@
 /* 初期化 */
 body {
     font-family: 'メイリオ', sans-serif;
+    background-color: rgb(240, 240, 240);
 }
 
 a {
@@ -12,18 +13,8 @@ a {
     cursor: pointer;
 }
 
-/******************************************************
-body {
-    background: url("../images/blue.jpg");
-}
-*******************************************************/
-#title {
-    background: url("../images/blue.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-table {
-    width: 100%;
+.top, .down, .left, .right {
+    background-color: white;
 }
 
 .notBlank {
@@ -33,32 +24,8 @@ table {
 /*******************************************************/
 /*           メニュー                                  */
 /*******************************************************/
-.menu a:hover {
-    color: #fff;
-}
-
-.selected {
+.active {
     font-weight: bold;
-}
-
-.menu > div {
-    width: 150px;
-    line-height: 2;
-/*    border: 1px solid #888; */
-    padding: 5px;
-    margin-bottom: 10px;
-    border-left: 10px solid;
-}
-
-/*******************************************************/
-/*           HOME                                      */
-/*******************************************************/
-.menu .home {
-    border-color: rgb(238, 88, 88);
-}
-.menu .home:hover {
-    font-weight: bold;
-    background-color: rgb(238, 88, 88);
 }
 
 /*******************************************************/
@@ -67,39 +34,27 @@ table {
 .schedule {
     color: rgb(200, 49, 200);
 }
-.menu .schedule {
-    border-color: rgb(200, 49, 200);
-}
-.menu .schedule:hover {
-    font-weight: bold;
-    background-color: rgb(200, 49, 200);
-}
-.home-schedule .sub-title {
+.schedulebar {
+    border-top: 5px solid #000;
     border-color: rgb(200, 49, 200);
 }
 
 /*******************************************************/
 /*           メモ管理関連                             */
 /*******************************************************/
-.board {
+.memo {
     color: rgb(172, 217, 66);
 }
-.menu .board {
-    border-color: rgb(172, 217, 66);
-}
-.menu .board:hover {
-    font-weight: bold;
-    background-color: rgb(172, 217, 66);
-}
-.home-board .sub-title {
+.memobar {
+    border-top: 5px solid #000;
     border-color: rgb(172, 217, 66);
 }
 
-#board-list .card {
+#memo-list .card {
     border-color: rgb(172, 217, 66);
 }
 
-#board-list .card:hover {
+#memo-list .card:hover {
     background-color: rgb(231, 255, 231);
 
 }
@@ -110,14 +65,8 @@ table {
 .album {
     color: rgb(50, 50, 220);
 }
-.menu .album {
-    border-color: rgb(50, 50, 220);
-}
-.menu .album:hover {
-    font-weight: bold;
-    background-color: rgb(50, 50, 220);
-}
-.home-album .sub-title {
+.albumbar {
+    border-top: 5px solid #000;
     border-color: rgb(50, 50, 220);
 }
 
@@ -132,19 +81,21 @@ table {
 }
 
 /*******************************************************/
+/*           管理画面関連                               */
+/*******************************************************/
+.settingbar {
+    border-top: 5px solid #000;
+    border-color: rgb(240, 240, 240);
+}
+
+/*******************************************************/
 /*           プリント管理関連                           */
 /*******************************************************/
 .print {
     color: rgb(238, 189, 56);
 }
-.menu .print {
-    border-color: rgb(238, 189, 56);
-}
-.menu .print:hover {
-    font-weight: bold;
-    background-color: rgb(238, 189, 56);
-}
-.home-print .sub-title {
+.printbar {
+    border-top: 5px solid #000;
     border-color: rgb(238, 189, 56);
 }
 
@@ -162,25 +113,10 @@ table {
 }
 
 /*******************************************************/
-/*           index(右)                                 */
-/*******************************************************/
-.sub-title {
-    width: 100%;
-    padding: 2px;
-    border-bottom: 2px solid;
-}
-
-.home-img {
-    width: 200px;
-    height: 200px;
-}
-
-/*******************************************************/
 /*           スケジュールのカレンダーテーブル            */
 /*******************************************************/
 #calendar {
     text-align: center;
-    width: 100%;
 }
 
 table {
@@ -212,11 +148,6 @@ td.disabled {
     color: #ccc;
 }
 
-/*予定表示*/
-.memo {
-    width: 60%;
-}
-
 /*******************************************************/
 /*           アイコンの色                           */
 /*******************************************************/
@@ -234,19 +165,3 @@ td.disabled {
     color: green;
 }
 /*******************************************************/
-
-/* 全体 */
-.wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-    color: #666;
-}
-
-footer {
-    background-color: rgb(235, 235, 235);
-    text-align: center;
-    width: 100%;
-    font-size: 12px;
-    padding: 15px 0;
-}
-

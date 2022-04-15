@@ -11,67 +11,68 @@
 </head>
 <body>
 
-<header>
-    <div id="header"></div>
-</header>
+    <div class="container-xl">
+        <!-- nav -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <div class="schedulebar"></div>
+              <a class="nav-link schedule" href="../schedule/calender.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <div class="memobar"></div>
+                <a class="nav-link memo" href="../memo/memo.html">Memo</a>
+            </li>
+            <li class="nav-item">
+                <div class="albumbar"></div>
+                <a class="nav-link album" href="../album/album.html">Album</a>
+            </li>
+            <li class="nav-item">
+                <div class="printbar"></div>
+                <a class="nav-link print" href="../prints/print.html">Print</a>
+            </li>
+            <li class="nav-item">
+                <div class="settingbar"></div>
+                <a class="nav-link setting" href="../setting.html"><small class="text-black-50">Setting</small></a>
+            </li>
+        </ul>
+        <!-- /.nav -->
+    
+        <div class="row">
+            <div class="top col-12 py-2">
+                <!-- タイトル -->
+                <div class="container">
+                    <h3 class="text-center"><i class="bi bi-clipboard-check print mr-1"></i>プリント管理</h3>
+                </div>
 
-<div class="container-lg">
-
-    <div class="row">
-        <!--(左)メニュー-->
-        <div class="col-2">
-            <div class="menu">
-                <div class="home"><a href="../index.html">HOME</a></div>
-            </div>
-            <div class="menu">
-                <div class="schedule"><a href="../schedule/calender.html">スケジュール</a></div>
-            </div>
-            <div class="menu">
-                <div class="board"></i><a href="../board/board.html"></i>メモ帳</a></div>
-            </div>
-            <div class="menu">
-                <div class="album"><a href="../album/album.html">アルバム</a></div>
-            </div>
-            <div class="menu">
-                <div class="print"><a href="../prints/print.html">プリント</a></div>
-            </div>
-        </div>
-
-        <div class="col">
-
-            <!-- タイトル -->
-            <div class="container">
-                <h3 class="text-center"><i class="bi bi-clipboard-check print mr-1"></i>プリント管理</h3>
-            </div>
-
-            <div class="text-right">
-                <form action="">
-                    <div>
-                        <span class="viewForm pointer mr-3" data-category="プリント追加" data-toggle="modal" data-target="#saveFormModal">
-                            <i class="bi bi-clipboard-plus mr-1"></i>追加</span>
+                <!-- 追加・検索 -->
+                <div class="text-right">
+                    <form action="">
+                        <div>
+                            <span class="viewForm pointer mr-3" data-category="プリント追加" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-clipboard-plus mr-1"></i>追加</span>
+                                </span>
+                            <span class="pointer">
+                                <select name="kind">
+                                    <option value="0">すべて</option>
+                                    <option value="1">保育園</option>
+                                    <option value="2">小学校</option>
+                                    <option value="3">マンション</option>
+                                </select>
+                                <input type="text" name="keywords" size="5" placeholder="キーワード" class=""> 
+                                <button type="submit" class="btn-outline btn"><i class="bi bi-search mr-1"></i>検索</button>
                             </span>
-                        <span class="pointer">
-                            <select name="kind">
-                                <option value="0">すべて</option>
-                                <option value="1">保育園</option>
-                                <option value="2">小学校</option>
-                                <option value="3">マンション</option>
-                            </select>
-                            <input type="text" name="keywords" size="5" placeholder="キーワード" class=""> 
-                            <button type="submit" class="btn-outline btn"><i class="bi bi-search mr-1"></i>検索</button>
-                        </span>
-                    </div>
-                </form>
-
-            </div>
-
-            <!-- プリント一覧 -->
-            <div class="container">
-                <div id="print-list" class="row">
+                        </div>
+                    </form>
+                </div>
+            </div><!--/.top-->
+    
+            <div class="down col-12">
+                
+                <div class="row" id="print-list">
                     <div class="col-md-4 col-sm-6 mb-2">
                         <div class="card">
                             <div class="card-header bg-transparent">
-                                小学校
+                                <h5 class="card-title">小学校</h5>
                             </div>
                             <img class="card-img-top pointer" src="../images/printImg/20220405_075247387_iOS.jpg"
                                     title="拡大" data-toggle="modal" data-target="#imgModal"
@@ -90,7 +91,7 @@
                     <div class="col-md-4 col-sm-6 mb-2">
                         <div class="card">
                             <div class="card-header bg-transparent">
-                                マンション
+                                <h5 class="card-title">マンション</h5>
                             </div>
                             <img class="card-img-top pointer" src="../images/printImg/20220405_075256182_iOS.jpg"
                                     title="拡大" data-toggle="modal" data-target="#imgModal"
@@ -111,7 +112,7 @@
                     <div class="col-md-4 col-sm-6 mb-2">
                         <div class="card">
                             <div class="card-header bg-transparent">
-                                保育園
+                                <h5 class="card-title">保育園</h5>
                             </div>
                             <img class="card-img-top pointer" src="../images/printImg/20220405_075307729_iOS.jpg"
                                     title="拡大" data-toggle="modal" data-target="#imgModal"
@@ -131,7 +132,7 @@
                     <div class="col-md-4 col-sm-6 mb-2">
                         <div class="card">
                             <div class="card-header bg-transparent">
-                                保育園
+                                <h5 class="card-title">保育園</h5>
                             </div>
                             <img class="card-img-top pointer" src="../images/printImg/20220405_075321812_iOS.jpg"
                                     title="拡大" data-toggle="modal" data-target="#imgModal"
@@ -151,7 +152,7 @@
                     <div class="col-md-4 col-sm-6 mb-2">
                         <div class="card">
                             <div class="card-header bg-transparent">
-                                保育園
+                                <h5 class="card-title">保育園</h5>
                             </div>
                             <img class="card-img-top pointer" src="../images/printImg/20220405_075333947_iOS.jpg"
                                     title="拡大" data-toggle="modal" data-target="#imgModal"
@@ -167,9 +168,9 @@
                             </div>
                         </div>   
                     </div><!--5-->
+                </div> <!-- /.row -->
 
-                </div><!-- /.row -->
-            </div><!-- /.container -->
+            </div><!-- /.down -->
 
         </div>
     </div>
@@ -278,8 +279,6 @@
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="../js/common.js"></script>
 <script>
-    //ヘッダー表示
-    IncludeHTML("div#header","../common/header.html");
     //選択するメニュー
     chooseNav('.print');
 

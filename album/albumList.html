@@ -11,71 +11,176 @@
 </head>
 <body>
 
-<header>
-    <div id="header"></div>
-</header>
-
-<div class="container-xl">
-
-    <div class="row">
-        <!-- 左(メニュー) -->
-        <div class="col-2">
-            <div class="menu">
-                <div class="home"><a href="../index.html">HOME</a></div>
-            </div>
-            <div class="menu">
-                <div class="schedule"><a href="../schedule/calender.html">スケジュール</a></div>
-            </div>
-            <div class="menu">
-                <div class="board"><a href="../board/board.html">メモ帳</a></div>
-            </div>
-            <div class="menu">
-                <div class="album"><a href="../album/album.html">アルバム</a></div>
-            </div>
-            <div class="menu">
-                <div class="print"><a href="../prints/print.html">プリント</a></div>
-            </div>
-        </div>
-
-        <!-- 右(本文) -->
-        <div class="col">
-
-            <div class="container">
-
+    <div class="container-xl">
+        <!-- nav -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <div class="schedulebar"></div>
+              <a class="nav-link schedule" href="../schedule/calender.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <div class="memobar"></div>
+                <a class="nav-link memo" href="../memo/memo.html">Memo</a>
+            </li>
+            <li class="nav-item">
+                <div class="albumbar"></div>
+                <a class="nav-link album" href="../album/album.html">Album</a>
+            </li>
+            <li class="nav-item">
+                <div class="printbar"></div>
+                <a class="nav-link print" href="../prints/print.html">Print</a>
+            </li>
+            <li class="nav-item">
+                <div class="settingbar"></div>
+                <a class="nav-link setting" href="../setting.html"><small class="text-black-50">Setting</small></a>
+            </li>
+        </ul>
+        <!-- /.nav -->
+    
+        <div class="row">
+            <div class="top col-12 py-2">
                 <div id="cal-header">
                     <h3 class="text-center">
-                        <i class="bi bi-image album mr-2"></i>アルバム - 運動会
+                        <i class="bi bi-image album mr-2"></i>アルバム-運動会
                     </h3>
                 </div>
 
                 <!-- 追加、検索 -->
-                    <form action="">
-                        <a href="../album/album.html"><i class="bi bi-card-list mr-1"></i>リスト</a>
-                        <span class="float-right mb-1">
-                            <span class="addForm pointer mr-3" data-category="写真追加" data-toggle="modal" data-target="#addFormModal">
-                                <i class="bi bi-image mr-1"></i>追加</span>
-                            <span class="pointer">
-                                <select name="kind">
-                                    <option value="0">すべて</option>
-                                    <option value="1">運動会</option>
-                                    <option value="2">入学式</option>
-                                    <option value="3">卒園式</option>
-                                </select>
-                                <input type="text" name="tags" size="10" placeholder="タグ"> 
-                                <button class="btn-outline btn"><i class="bi bi-search"></i>検索</button>
-                            </span>
-                        </span>
+                <div class="container text-right">
+                    <form action="../album/album.html">
+                        <span class="albumAddForm pointer mr-3" data-category="アルバム追加" data-toggle="modal" data-target="#albumAddFormModal">
+                            <i class="bi bi-image mr-1"></i>アルバム追加</span>
+                        <span class="addForm pointer mr-3" data-category="写真追加" data-toggle="modal" data-target="#addFormModal">
+                        <i class="bi bi-image mr-1"></i>写真追加</span>
+                        <select name="kind">
+                            <option value="0">すべて</option>
+                            <option value="1">運動会</option>
+                            <option value="2">入学式</option>
+                            <option value="3">卒園式</option>
+                        </select>
+                        <input type="text" name="tags" size="10" placeholder="タグ"> 
+                        <button class="btn-outline btn"><i class="bi bi-search"></i>検索</button>
                     </form>
+                </div>
+            </div>
+    
+            <!-- Left -->
+            <div class="left col-5">
+    
+                <!-- アルバムリスト -->
+                <div id="photo-list" class="row">
 
+                    <div class="col-md-6 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title align-middle">運動会</h5>
+                            </div>
+                            <a href="../album/albumList.html?albumId=1">
+                                <img class="card-img-top" src="../prac_images/flower1.jpg">
+                            </a>
+                            <div class="card-footer text-right">
+                                <small class="text-muted">12枚</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title align-middle">運動会</h5>
+                            </div>
+                            <a href="../album/albumList.html?albumId=1">
+                                <img class="card-img-top" src="../prac_images/flower3.jpg">
+                            </a>
+                            <div class="card-footer text-right">
+                                <small class="text-muted">12枚</small>
+                            </div>
+                        </div>
+                    </div>
                 
-                <div id="photo-list">
-
-                    <img src="../prac_images/flower1.jpg">
-
+                    <div class="col-md-6 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title align-middle">卒園式</h5>
+                            </div>
+                            <a href="../album/albumList.html?albumId=1">
+                                <img class="card-img-top" src="../prac_images/flower5.jpg">
+                            </a>
+                            <div class="card-footer text-right">
+                                <small class="text-muted">12枚</small>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title align-middle">運動会</h5>
+                            </div>
+                            <a href="../album/albumList.html?albumId=1">
+                                <img class="card-img-top" src="../prac_images/flower4.jpg">
+                            </a>
+                            <div class="card-footer text-right">
+                                <small class="text-muted">12枚</small>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
 
             </div>
+
+            <!-- Right -->
+            <div class="right col-7">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+                <img class="img-thumbnail" src="../prac_images/flower1.jpg" width="200px">
+            </div>
             
+        </div>
+    </div>
+</div>
+
+<!-- アルバム追加フォーム -->
+<div class="modal fade" id="albumAddFormModal" tabindex="-1" role="dialog" aria-labelledby="albumAddFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">
+                    <i class="bi bi-pencil-square"></i><span class="modal-title">追加/編集</span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="../album/albumList.html">
+                <input type="hidden" name="id">
+                <div class="modal-body">
+
+                    <div class="form-group row text-center">
+                        <label for="memo-title" class="col-sm-3 col-form-label col-form-label">タイトル</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="memo-title" name="title" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row text-center">
+                        <label for="memo-content" class="col-sm-2 col-form-label col-form-label">メモ</label>
+                        <div class="col-sm-10">
+                            <textarea id="memo-content" name="content" class="form-control border-danger"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">登録</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -92,7 +197,7 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="album.html">
+            <form action="../album/albumList.html">
                 <input type="hidden" name="id">
                 <div class="modal-body">
 
@@ -157,10 +262,10 @@
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="../js/common.js"></script>
 <script>
-    //ヘッダー表示
-    IncludeHTML("div#header","../common/header.html");
     //選択するメニュー
     chooseNav('.album');
+    //アルバム追加画面表示
+    modalControl('albumAddForm', '#albumAddFormModal');
     //追加画面表示
     modalControl('addForm', '#addFormModal');
     //削除画面表示

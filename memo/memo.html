@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メモ帳</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container-xl">
+        <!-- nav -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <div class="schedulebar"></div>
+              <a class="nav-link schedule" href="../schedule/calender.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <div class="memobar"></div>
+                <a class="nav-link memo" href="../memo/memo.html">Memo</a>
+            </li>
+            <li class="nav-item">
+                <div class="albumbar"></div>
+                <a class="nav-link album" href="../album/album.html">Album</a>
+            </li>
+            <li class="nav-item">
+                <div class="printbar"></div>
+                <a class="nav-link print" href="../prints/print.html">Print</a>
+            </li>
+            <li class="nav-item">
+                <div class="settingbar"></div>
+                <a class="nav-link setting" href="../setting.html"><small class="text-black-50">Setting</small></a>
+            </li>
+        </ul>
+        <!-- /.nav -->
+    
+        <div class="row">
+
+            <div class="top col-12 py-2">
+                <div id="memo-header">
+                    <h3 class="text-center">
+                        <i class="bi bi-pencil-square memo mr-2"></i>メモ帳
+                    </h3>
+                </div>
+                <div id="memo-add" class="text-right">
+                    <form action="">
+                        <div>
+                            <span class="addForm pointer mr-3" data-category="メモ追加" data-toggle="modal" data-target="#addFormModal">
+                                <i class="bi bi-pencil-square mr-1"></i>追加
+                            </span>
+                            <span class="pointer" title="キーワードによるメモ検索">
+                                <input type="text" name="keywords" size="5" placeholder="キーワード" class=""> 
+                                <button type="submit" class="btn-outline btn"><i class="bi bi-search mr-1"></i>検索</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.top-->
+
+            <div class="down col-12">
+                
+                <div class="row" id="memo-list">
+                    <div class="col-md-3 col-sm-4 mb-2">
+                        <div class="card">
+                            <div class="card-body bg-transparent">
+                                <p class="card-text">なす トマト たまご<br>牛乳
+                                    <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                        <i class="bi bi-x text-danger" title="削除"></i></span>
+                                </p>
+                                <p class="card-text text-right">
+                                    <small class="text-muted">2022-04-20</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 col-sm-4 mb-2">
+                        <div class="card">
+                            <div class="card-body bg-transparent">
+                                <h5 class="card-title">さくら</h5>
+                                <p class="card-text">23日お弁当不要
+                                <span class="deleteForm pointer" data-id="id-2" data-toggle="modal" data-target="#deleteFormModal">
+                                    <i class="bi bi-x text-danger" title="削除"></i></span>
+                                </p>
+                                <p class="card-text text-right"><small class="text-muted">2022-04-20</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 mb-2">
+                        <div class="card">
+                            <div class="card-body bg-transparent">
+                                <h5 class="card-title">家族会議</h5>
+                                <p class="card-text">30日 19:00~
+                                    <span class="deleteForm pointer" data-id="id-3" data-toggle="modal" data-target="#deleteFormModal">
+                                    <i class="bi bi-x text-danger" title="削除"></i></span>
+                                </p>
+                                <p class="card-text text-right"><small class="text-muted">2022-04-18</small></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3 col-sm-4 mb-2">
+                        <div class="card">
+                            <div class="card-body bg-transparent">
+                                <p class="card-text">なす トマト たまご<br>牛乳
+                                <span class="deleteForm pointer" data-id="id-4" data-toggle="modal" data-target="#deleteFormModal">
+                                    <i class="bi bi-x text-danger" title="削除"></i></span>
+                                </p>
+                                <p class="card-text text-right"><small class="text-muted">2022-04-17</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 mb-2">
+                        <div class="card">
+                            <div class="card-body bg-transparent">
+                                <p class="card-text">なす トマト たまご<br>牛乳
+                                <span class="deleteForm pointer" data-id="id-4" data-toggle="modal" data-target="#deleteFormModal">
+                                    <i class="bi bi-x text-danger" title="削除"></i></span>
+                                </p>
+                                <p class="card-text text-right"><small class="text-muted">2022-04-17</small></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3 col-sm-4 mb-2">
+                        <div class="card">
+                            <div class="card-body bg-transparent">
+                                <h5 class="card-title">さくら</h5>
+                                <p class="card-text">23日お弁当不要
+                                <span class="deleteForm pointer" data-id="id-5" data-toggle="modal" data-target="#deleteFormModal">
+                                    <i class="bi bi-x text-danger" title="削除"></i></span>
+                                </p>
+                                <p class="card-text text-right"><small class="text-muted">2022-04-16</small></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3 col-sm-4 mb-2">
+                        <div class="card">
+                            <div class="card-body bg-transparent">
+                                <h5 class="card-title">家族会議</h5>
+                                <p class="card-text">30日 19:00~
+                                <span class="deleteForm pointer" data-id="id-6" data-toggle="modal" data-target="#deleteFormModal">
+                                    <i class="bi bi-x text-danger" title="削除"></i></span>
+                                </p>
+                                <p class="card-text text-right"><small class="text-muted">2022-04-13</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- /.row -->
+
+            </div><!-- /.down -->
+
+        </div>
+    </div>
+</div>
+
+<!-- 追加/変更フォーム -->
+<div class="modal fade" id="addFormModal" tabindex="-1" role="dialog" aria-labelledby="addFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">
+                    <i class="bi bi-pencil-square"></i><span class="modal-title">追加/編集</span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="../memo/memo.html">
+                <input type="hidden" name="id">
+                <div class="modal-body">
+
+                    <div class="form-group row text-center">
+                        <label for="memo-title" class="col-sm-3 col-form-label col-form-label">タイトル</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="memo-title" name="title" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row text-center">
+                        <label for="memo-content" class="col-sm-2 col-form-label col-form-label">メモ</label>
+                        <div class="col-sm-10">
+                            <textarea id="memo-content" name="content" class="form-control border-danger"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">登録</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 削除フォーム -->
+<div class="modal fade" id="deleteFormModal" tabindex="-1" role="dialog" aria-labelledby="deleteFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">
+                    <i class="bi bi-clipboard-plus"></i><span class="modal-title">プリント削除</span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="../memo/memo.html">
+                <input type="text" name="id">
+                <div class="modal-body">
+
+                    <h5 class="text-center"><i class="bi bi-exclamation-triangle text-danger"></i>本当に削除しますか？</h5>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger">削除</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    //選択するメニュー
+    chooseNav('.memo');
+    //追加画面表示
+    modalControl('addForm', '#addFormModal');
+    //削除画面表示
+    modalControl('deleteForm', '#deleteFormModal');
+</script>
+</body>
+</html>
