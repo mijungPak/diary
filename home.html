@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body style="height: 100%;">
+    <div class="container-xl">
+        <div class="row">
+            <div id="menu">
+                <a href="#" id="home" class="menu home">home</a>
+                <a href="#" id="schedule" class="menu schedule">Schedule</a>
+                <a href="#" id="news" class="menu news">News</a>
+                <a href="#" id="contact" class="menu contact">Contact</a>
+                <a href="#" id="about" class="menu about">About</a>
+            </div>
+            <div id="menu-sm">
+                <div id="sm_home" class="menu home"></div>
+                <div id="sm_schedule" class="menu schedule"></div>
+                <div id="sm_news" class="menu news"> </div>
+                <div id="sm_contact" class="menu contact"> </div>
+                <div id="sm_about" class="menu about"> </div>
+            </div>
+            <div id="left" class="col-5" style="height:100%;background-color:pink;">
+
+left
+            </div>
+            <div id="right" class="col-6">
+right
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+
+viewMenu("#schedule");
+addMenuControll("#sm_home", "#home");
+//addMenuControll("#sm_schedule", "#schedule");
+addMenuControll("#sm_news", "#news");
+addMenuControll("#sm_contact", "#contact");
+addMenuControll("#sm_about", "#about");
+
+function viewMenu(menuId) {
+    $(menuId).css("visibility", "visible");
+    $(menuId).addClass("selected");
+}
+function addMenuControll(smMenu, targetMenu) {
+    $(smMenu).mouseover(function() {
+//        $(targetMenu).css("visibility", "visible");
+$(targetMenu).show("slow");
+    });
+    $(smMenu).mouseout(function() {
+        $(targetMenu).css("visibility", "hidden");
+        
+    });
+
+}
+</script>
+</body>
+</html>

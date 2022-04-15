@@ -1,0 +1,44 @@
+body {
+    border: 1px solid;
+}
+
+#menu a{
+    display: block;
+}
+
+.menu {
+    border-left: 10px solid;
+    height: 30px;
+    margin: 0px 0px 2px;
+}
+
+#menu {
+    width: 100px;
+    text-align: center;
+    visibility: hidden;
+}
+
+#menu-sm {
+    cursor: pointer;
+}
+
+.select {
+    visibility: visible;
+    font-weight: bold;
+}
+
+.schedule {
+    border-color: blueviolet;
+}
+
+.news {
+    border-color: chartreuse;
+}
+
+.contact {
+    border-color: darkblue;
+}
+
+.about {
+    border-color: darkgreen;
+}
