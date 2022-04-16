@@ -113,7 +113,7 @@ a {
 }
 
 /*******************************************************/
-/*           スケジュールのカレンダーテーブル            */
+/*           カレンダーテーブル            */
 /*******************************************************/
 #calendar {
     text-align: center;
@@ -124,13 +124,13 @@ table {
 }
 
 #cal-main td:hover {
-    background-color: rgb(247, 245, 245);
+    outline: 1px dotted rgb(200, 49, 200);;
 }
 
 
 /* 本日 */
 .today {
-    background-color: #ffd1d1;
+    background-color: #ffeaff;
 }
 
 /* 日曜日 */
@@ -163,5 +163,9 @@ td.disabled {
 }
 .green {
     color: green;
+}
+
+.orange {
+    color: orange;
 }
 /*******************************************************/
