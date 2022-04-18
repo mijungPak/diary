@@ -11,78 +11,59 @@
 </head>
 <body>
 
-<header>
-    <div id="header"></div>
-</header>
-
-<div class="container-lg">
+<div class="container-xl">
+    <!-- nav -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <div class="schedulebar"></div>
+          <a class="nav-link schedule active" href="../schedule/calender.html">Calendar</a>
+        </li>
+        <li class="nav-item">
+            <div class="memobar"></div>
+            <a class="nav-link memo" href="../memo/memo.html">Memo</a>
+        </li>
+        <li class="nav-item">
+            <div class="albumbar"></div>
+            <a class="nav-link album" href="../album/album.html">Album</a>
+        </li>
+        <li class="nav-item">
+            <div class="printbar"></div>
+            <a class="nav-link print" href="../prints/print.html">Print</a>
+        </li>
+        <li class="nav-item">
+            <div class="settingbar"></div>
+            <a class="nav-link setting" href="../setting.html"><small class="text-black-50">Setting</small></a>
+        </li>
+      </ul>
+    <!-- /.nav -->
 
     <div class="row">
-        <!-- (左)メニュー -->
-        <div class="col-2">
-            <div class="menu">
-                <div class="home"><a href="../index.html">HOME</a></div>
-            </div>
-            <div class="menu">
-                <div class="schedule"><a href="../schedule/calender.html">スケジュール</a></div>
-            </div>
-            <div class="menu">
-                <div class="board"></i><a href="../board/board.html"></i>メモ帳</a></div>
-            </div>
-            <div class="menu">
-                <div class="album"><a href="../album/album.html">アルバム</a></div>
-            </div>
-            <div class="menu">
-                <div class="print"><a href="../prints/print.html">プリント</a></div>
-            </div>
+        <div class="top col-12 py-2">
         </div>
 
-        <!-- (右)本文 -->
-        <div class="col">
-
-            <div class="container" id="calendar">
-
-                <div id="cal-header">
-                    <h3 class="text-center">
-                        <a href="../schedule/calender.html?date=2022/03" title="2022/03"><i class="bi bi-caret-left-fill"></i></a>
-                        2022年4月
-                        <a href="../schedule/calender.html?date=2022/05" title="2022/05"><i class="bi bi-caret-right-fill"></i></a>
-                    </h3>
-                </div>
-
-                <div id="cal-menu">
-                    <span class="float-left"><a href="../schedule/scheduleList.html"><i class="bi bi-card-list mr-1"></i>リスト</a></span>
-                    <span class="dropdown float-right">
-                        <!-- サブメニュー -->
-                        <span class="viewForm pointer mr-3" data-category="予定追加" data-toggle="modal" data-target="#saveFormModal">
-                            <i class="bi bi-calendar-plus mr-1"></i>予定追加</span>
-
-                        <a class="btn btn-outline-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            さくらの予定    
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                            <a href="../schedule/calender.html?id=0&date=2022/04" class="dropdown-item">全員</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="../schedule/calender.html?id=1&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle blue">太郎</i></a>
-                            <a href="../schedule/calender.html?id=2&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle purple">ひろこ</i></a>
-                            <a href="../schedule/calender.html?id=3&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle green">こうた</i></a>
-                            <a href="../schedule/calender.html?id=4&date=2022/04" class="dropdown-item"><i class="bi bi-person-circle pink">さくら</i></a>
-                        </div>
-
-                    </div><!--/.dropdown-->
-                </div>
-
+        <!-- Left -->
+        <div class="left col-xl-5 col-lg-5">
+            <div id="cal-header">
+                <h3 class="text-center">
+                    <a href="../schedule/calender.html?date=2022/03" title="2022/03"><i class="bi bi-caret-left-fill"></i></a>
+                    2022年4月
+                    <a href="../schedule/calender.html?date=2022/05" title="2022/05"><i class="bi bi-caret-right-fill"></i></a>
+                </h3>
+            </div>
+            <div id="calendar">
                 <div id="cal-main">
                     <table class="table" id="calTable">
+                        <thead class="thead-light">
                         <tr>
-                            <th>日</th>
-                            <th>月</th>
-                            <th>火</th>
-                            <th>水</th>
-                            <th>木</th>
-                            <th>金</th>
-                            <th>土</th>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
                         </tr>
+                        </thead>
                         <tr>
                             <td class="disabled">27</td>
                             <td class="disabled">28</td>
@@ -236,9 +217,136 @@
                         </tr>
                     </table>
                 </div>
-            </div><!-- /.container-->
+            </div>
+        </div>
+        <!-- /.Left -->
+        <!-- Right -->
+        <div class="right col-xl-7 col-lg-7">
+            <div id="cal-menu">
+                <div class="float-right">
+                    <!-- 追加・検索ー -->
+                    <span class="viewForm pointer mr-3" data-category="予定追加" data-toggle="modal" data-target="#saveFormModal">
+                        <i class="bi bi-calendar-plus mr-1"></i>予定追加
+                    </span>
+                    <select>
+                        <option value="0">すべて</option>
+                        <option value="1">たろう</option>
+                        <option value="2">ひろこ</option>
+                        <option value="3">けんた</option>
+                        <option value="4">さくら</option>
+                    </select>
+                    <input type="text" name="keywords" size="5" placeholder="キーワード" class=""> 
+                    <button type="submit" class="btn-outline btn"><i class="bi bi-search mr-1"></i>検索</button>
+                </div>
+
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <thead>
+                            <tr>
+                                <th class="align-middle" width="30%">
+                                    日付<a href="#"><i class="bi bi-caret-up-fill"></i></a>
+                                </th>
+                                <th>
+                                </th>
+                                <th class="align-middle" width="60%">予定</th>
+                            </tr>
+                        </thead>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2022/04/03 06:00</td>
+                        <td>太郎</td>
+                        <td>会社飲み会
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022/04/05 06:00</td>
+                        <td>太郎</td>
+                        <td>友達と一緒にゴルフ
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022/04/05 09:00</td>
+                        <td>こうた</td>
+                        <td>テニス
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022/04/05 11:00</td>
+                        <td>ひろこ</td>
+                        <td>バドミントン
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022/04/05 15:00</td>
+                        <td>さくら</td>
+                        <td>バレーボール
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022/04/07 11:00</td>
+                        <td>こうた</td>
+                        <td>面接
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022/04/11 09:00</td>
+                        <td>ひろこ</td>
+                        <td>体育館
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022/04/11 09:00</td>
+                        <td>さくら</td>
+                        <td>体育館
+                            <span class="viewForm pointer" data-id="id-1" data-category="変更" data-toggle="modal" data-target="#saveFormModal">
+                                <i class="bi bi-pencil text-danger small" title="変更"></i></span>
+                            <span class="deleteForm pointer" data-id="id-1" data-toggle="modal" data-target="#deleteFormModal">
+                                <i class="bi bi-trash text-danger small" title="削除"></i></span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
 
         </div>
+
+        </div>
+        <!-- /. Right -->
+
     </div>
 </div>
 
@@ -283,15 +391,40 @@
         </div>
     </div>
 </div>
+<!-- 削除フォーム -->
+<div class="modal fade" id="deleteFormModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center">
+                    <i class="bi bi-clipboard-plus"></i><span class="modal-title">削除</span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="print.html">
+                <input type="hidden" name="id">
+                <div class="modal-body">
+
+                    <h5 class="text-center"><i class="bi bi-exclamation-triangle text-danger"></i>本当に削除しますか？</h5>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger">削除</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <script src="../js/jquery-3.6.0.min.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="../js/common.js"></script>
 <script>
-    IncludeHTML("div#header","../common/header.html");
-
     //選択するメニュー
-    chooseNav('.schedule');
+    chooseNav('.calendar');
 
     //追加、変更画面表示
     modalControl('viewForm', '#saveFormModal');

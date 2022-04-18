@@ -1,15 +1,7 @@
 
-//共通ヘッダーinclude用
-function IncludeHTML(selector,filepath){
-    $(function (){
-        $.ajaxSetup({cache:false});
-        $(selector).load(filepath);
-    });
-}
-
 //選択中のメニュー
 function chooseNav(currentNav){
-    $(currentNav).addClass('selected');
+    $(currentNav).addClass('active');
 }     
 
 //modal画面表示
