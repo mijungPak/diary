@@ -1,0 +1,5 @@
+GitHub
+アカウント：yoichi-muraoka
+リポジトリ：mucheduler
+ブランチ：feature/showDaily
+データベースのセットアップ：src/main/resources/sqlフォルダ内
